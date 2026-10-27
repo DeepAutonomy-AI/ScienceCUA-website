@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="ScienceCUA: Resource-to-Skill Construction and Execution-Guided Skill Evolution for Scientific Computer Use Agents.">
     <title>ScienceCUA</title>
-    <link rel="stylesheet" href="styles.css?v=20261021-8">
+    <link rel="stylesheet" href="styles.css?v=20261027-3">
     <script src="contact.js" defer></script>
     <script src="evolution.js" defer></script>
     <script src="knowledge.js" defer></script>
@@ -51,8 +51,8 @@
           <ul class="affiliation-list" aria-label="Affiliations">
             <li><sup>1</sup>DeepAutonomy</li>
             <li><sup>2</sup>Peking University</li>
-            <li><sup>3</sup>Tsinghua University</li>
-            <li><sup>4</sup>Hong Kong Polytechnic University</li>
+            <li><sup>3</sup>College of AI, Tsinghua University</li>
+            <li><sup>4</sup>The Hong Kong Polytechnic University</li>
             <li><sup>5</sup>Singapore Management University</li>
           </ul>
           <p class="author-note"><sup>&dagger;</sup>Corresponding author</p>
@@ -61,7 +61,7 @@
             <li><img src="assets/affiliations/deepautonomy.png" alt="DeepAutonomy"></li>
             <li><img src="assets/affiliations/pku.svg" alt="Peking University"></li>
             <li><img src="assets/affiliations/tsinghua.svg" alt="Tsinghua University"></li>
-            <li><img src="assets/affiliations/polyu.png" alt="Hong Kong Polytechnic University"></li>
+            <li><img src="assets/affiliations/polyu.png" alt="The Hong Kong Polytechnic University"></li>
             <li><img src="assets/affiliations/smu.svg" alt="Singapore Management University"></li>
           </ul>
 
@@ -143,7 +143,7 @@
             <a class="figure-surface" href="assets/figures/pipeline.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution ScienceCUA pipeline figure as a PDF">
               <picture>
                 <source srcset="assets/figures/pipeline.webp" type="image/webp">
-                <img src="assets/figures/pipeline.png" width="2800" height="1495" loading="lazy" decoding="async" alt="The ScienceCUA pipeline: source-grounded construction of Skills and References, execution-guided exploration and knowledge revision with independent validation, and ScienceBoard-VE for evolution and held-out evaluation.">
+                <img src="assets/figures/pipeline.png" width="2800" height="1079" loading="lazy" decoding="async" alt="The ScienceCUA pipeline: source-grounded construction of Skills and References, followed by execution-guided skill evolution with failure diagnosis, trajectory comparison, independent validation, and consolidation into a frozen final library.">
               </picture>
             </a>
           </figure>
@@ -397,7 +397,7 @@ end Hidden</code></pre></div>
         <div class="research-inner">
           <header class="research-heading">
             <p class="research-eyebrow"><span aria-hidden="true">04 /</span> Main Results</p>
-            <h2 id="results-title">Source-grounded knowledge improves task success.</h2>
+            <h2 id="results-title">ScienceCUA improves task success rates.</h2>
             <p class="research-lead">
               We evaluate the initial Skills and References on 168 held-out ScienceBoard-Verified tasks across six scientific applications. ScienceCUA achieves the highest average success rate in all four model-based settings and both native-agent settings.
             </p>
@@ -425,7 +425,7 @@ end Hidden</code></pre></div>
           <p class="results-table-intro">Table 1 from the paper. Success rate (%) · Higher is better.</p>
           <p class="results-scroll-hint">Scroll horizontally to view every application <span aria-hidden="true">↔</span></p>
           <div class="results-table-wrap" role="region" aria-labelledby="model-results-caption" tabindex="0">
-            <table class="results-table" aria-describedby="results-table-notes">
+            <table class="results-table">
               <caption id="model-results-caption">Model-based evaluation</caption>
               <thead>
                 <tr>
@@ -696,7 +696,7 @@ end Hidden</code></pre></div>
           </div>
 
           <div class="results-table-wrap" role="region" aria-labelledby="agent-results-caption" tabindex="0">
-            <table class="results-table" aria-describedby="results-table-notes">
+            <table class="results-table">
               <caption id="agent-results-caption">Native-agent evaluation</caption>
               <thead>
                 <tr>
@@ -799,16 +799,6 @@ end Hidden</code></pre></div>
                 </tbody>
             </table>
           </div>
-
-          <div class="results-notes" id="results-table-notes">
-            <p><strong>Reading the table.</strong> Average is the unweighted mean across the six applications. Parenthesized changes are relative to the Vanilla average within each group; pp denotes an absolute percentage-point difference. Bold marks the best result in each column within a group, including ties. Shaded rows mark ScienceCUA.</p>
-            <p><strong>Evaluation scope.</strong> These results use the initial library from Resource-to-Skill Construction, before execution-guided evolution. ScienceCUA and VisualSkill use the same documentation inputs; SkillFoundry collects online resources using the installed software name and version.</p>
-          </div>
-
-          <aside class="results-context" aria-labelledby="results-context-title">
-            <h3 id="results-context-title">Reusable knowledge for software agents</h3>
-            <p>Related work explores complementary ways to make operational knowledge available to agents: <a href="https://arxiv.org/abs/2606.18448" target="_blank" rel="noopener noreferrer">VisualSkill</a> combines application-specific guides with visual references, while <a href="https://arxiv.org/abs/2604.03964" target="_blank" rel="noopener noreferrer">SkillFoundry</a> compiles heterogeneous scientific resources into validated skill packages. In our evaluation, ScienceCUA’s source-grounded workflows and shared lookup knowledge improve average task success across both execution settings.</p>
-          </aside>
         </div>
       </section>
 
@@ -1051,7 +1041,7 @@ end Hidden</code></pre></div>
               </li>
               <li>
                 <h3>Feedback and contributions are welcome</h3>
-                <p>We’re sorry if our pipeline or its outputs fall short of your expectations. Please open a <a href="https://github.com/HSZD-Team/ScienceCUA/issues" target="_blank" rel="noopener noreferrer">GitHub Issue</a> to report problems or share suggestions. Code improvements and Pull Requests are also welcome as we continue improving ScienceCUA together.</p>
+                <p>PDF documents and HTML pages vary widely in structure, making it challenging to design a general-purpose pipeline that handles every case. We’re sorry if our pipeline or its outputs fall short of your expectations. Please open a <a href="https://github.com/HSZD-Team/ScienceCUA/issues" target="_blank" rel="noopener noreferrer">GitHub Issue</a> to report problems or share suggestions.</p>
               </li>
             </ol>
           </div>
@@ -1072,7 +1062,7 @@ end Hidden</code></pre></div>
               </li>
               <li>
                 <h3>欢迎反馈与贡献</h3>
-                <p>如果我们的流程或生成结果未达到您的预期，我们深感抱歉。欢迎在 GitHub <a href="https://github.com/HSZD-Team/ScienceCUA/issues" target="_blank" rel="noopener noreferrer">提交 Issue</a>，反馈问题或提出建议；也欢迎改进代码、提交 Pull Request，与我们一起完善 ScienceCUA。</p>
+                <p>PDF 文档和 HTML 网页的结构多种多样，要设计一套能适应所有情况的通用处理流程并不容易。如果我们的流程或生成结果未达到您的预期，我们深感抱歉。欢迎在 GitHub <a href="https://github.com/HSZD-Team/ScienceCUA/issues" target="_blank" rel="noopener noreferrer">提交 Issue</a>，反馈问题或提出建议。</p>
               </li>
             </ol>
           </div>
@@ -1080,7 +1070,7 @@ end Hidden</code></pre></div>
 
         <footer class="build-skills-actions">
           <button class="button build-skills-back" type="button">Back</button>
-          <a class="button primary build-skills-continue" href="https://took-intro-accomplished-soma.trycloudflare.com/">
+          <a class="button primary build-skills-continue" href="https://miller-edwards-stable-networking.trycloudflare.com/">
             <span>Continue</span>
             <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
           </a>
