@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="ScienceCUA: Resource-to-Skill Construction and Execution-Guided Skill Evolution for Scientific Computer Use Agents.">
     <title>ScienceCUA</title>
-    <link rel="stylesheet" href="styles.css?v=20261027-3">
+    <link rel="stylesheet" href="styles.css?v=20261106-1">
     <script src="contact.js" defer></script>
     <script src="evolution.js" defer></script>
     <script src="knowledge.js" defer></script>
     <script src="build-skills.js" defer></script>
+    <script src="promo-video.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -92,6 +93,33 @@
               </svg>
             </button>
           </div>
+        </div>
+      </section>
+
+      <section id="videos" class="promo-section" aria-labelledby="promo-title">
+        <div class="research-inner">
+          <header class="promo-heading">
+            <div>
+              <p class="promo-eyebrow">Video overview</p>
+              <h2 id="promo-title">See ScienceCUA in action.</h2>
+            </div>
+            <div class="promo-languages" role="group" aria-label="Video language">
+              <button type="button" aria-pressed="true" aria-controls="promo-video" data-video-src="assets/videos/sciencecua-en.mp4" data-video-poster="assets/videos/sciencecua-en.jpg" data-video-label="ScienceCUA promotional video in English">English</button>
+              <button type="button" lang="zh-CN" aria-pressed="false" aria-controls="promo-video" data-video-src="assets/videos/sciencecua-zh.mp4" data-video-poster="assets/videos/sciencecua-zh.jpg" data-video-label="ScienceCUA promotional video in Chinese">中文</button>
+            </div>
+          </header>
+          <div class="promo-frame">
+            <video id="promo-video" class="promo-player" controls playsinline preload="none" width="2560" height="1440" poster="assets/videos/sciencecua-en.jpg" src="assets/videos/sciencecua-en.mp4" aria-label="ScienceCUA promotional video in English">
+              Your browser does not support embedded video. Watch the <a href="assets/videos/sciencecua-en.mp4">English video</a> or the <a href="assets/videos/sciencecua-zh.mp4" lang="zh-CN">中文视频</a>.
+            </video>
+            <button id="promo-play" class="promo-play" type="button" aria-label="Play ScienceCUA promotional video in English" hidden>
+              <img src="assets/videos/sciencecua-en.jpg" width="1280" height="720" alt="">
+              <span class="promo-play-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m8 5 11 7-11 7Z"/></svg>Play video</span>
+            </button>
+          </div>
+          <noscript>
+            <p class="promo-fallback">Watch the <a href="assets/videos/sciencecua-en.mp4">English video</a> or the <a href="assets/videos/sciencecua-zh.mp4" lang="zh-CN">中文视频</a>.</p>
+          </noscript>
         </div>
       </section>
 
